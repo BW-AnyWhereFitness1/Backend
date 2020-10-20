@@ -1,4 +1,3 @@
-const bcryptjs = require('bcryptjs');
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
@@ -9,10 +8,10 @@ exports.seed = function(knex) {
       return knex('user').insert([
         {
           id: 1,
-          name: 'yessir',
-          username: 'nosir',
-          email: 'maybesir@gmail.com',
-          password: bcryptjs.hashSync('test', 8),
+          name: 'sun',
+          username: 'sun',
+          email: 'sun@gmail.com',
+          password: "sun",
           role: 'instructor'
         },
 
@@ -21,7 +20,7 @@ exports.seed = function(knex) {
           name: 'admin',
           username: 'admin123',
           email: 'admin@gmail.com',
-          password: bcryptjs.hashSync('test', 8),
+          password: "pass123456",
           role: 'instructor'
         },
         {
@@ -29,7 +28,7 @@ exports.seed = function(knex) {
           name: 'test',
           username: 'test123',
           email: 'test@gmail.com',
-          password: bcryptjs.hashSync('test', 8),
+          password: "testtest",
           role: 'client'
         }
       ]);
