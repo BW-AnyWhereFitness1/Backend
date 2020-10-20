@@ -29,12 +29,13 @@ classes wherever they might be held.
 | Add class POST       | /api/auth/instructor/classes     | name, instructor_name, type, intensity,location, date, max_size, duration, signedUp | N/A             | Creates a new class object in the database. Date has to string in "04/19/2020" format. Duration is a float and signedUp is a boolean(false as a default) |
 | Update Class PUT     | /api/auth/instructor/classes/:id | any of the field                                                                    | N/A             | Updates the class with given Id                                                                                                                          |
 | Removes Class DELETE | /api/auth/instructor/classes/:id | any of the field                                                                    | N/A             | Deletes the class with given Id                                                                                                                          |
+| GET all classes | /api/auth/instructor/classes/ | N/A | N/A | Gets all the classes when signed in as an instructor |
 
 ### **_Endpoints for the Users_**
 
 | Method                        | Endpoint                           | Body (required) | Body (optional) | Notes                                                            |
 | ----------------------------- | ---------------------------------- | --------------- | --------------- | ---------------------------------------------------------------- |
-| get classes GET               | /api/auth/users/classes            | N/A             | N/A             | Fetches all the classes from the database                        |
+| get classes GET               | /api/auth/users/classes/all            | N/A             | N/A             | Fetches all the classes from the database                        |
 | get classes by Id GET         | /api/auth/users/classes/:id        | id              | N/A             | Fetches the class with given Id.                                 |
 | get classes by Location GET   | /api/auth/users/classes/location   | location        | N/A             | Gets all the class in that location                              |
 | get classes by intensity GET  | /api/auth/users/classes/intensity  | intensity       | N/A             | Gets all the class in that intensity. "low", "medium", or "high" |
