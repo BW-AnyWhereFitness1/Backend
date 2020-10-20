@@ -4,7 +4,8 @@ module.exports = {
   addClass,
   updateClass,
   removeClass,
-  getClassById
+  getClassById,
+  getClass
 };
 
 function addClass(data) {

@@ -11,6 +11,7 @@ exports.up = function(knex) {
       tbl.string('instructor_name').notNullable();
   
       tbl.string('type').notNullable();
+      tbl.string('start-time').notNullable();
   
       tbl
         .string('intensity')
