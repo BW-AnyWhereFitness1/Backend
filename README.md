@@ -13,7 +13,7 @@ classes wherever they might be held.
 
 ## <a name="api-endpoints"></a>API endpoints
 
-### api url
+### https://anywherefit.herokuapp.com
 
 ### **_Authentication (for login)_**
 
