@@ -22,12 +22,12 @@ function addUser(user) {
     .insert(user);
 }
 
-function getUserById(id) {
-  return db
-    .select('*')
-    .from('user')
-    .where({id});
-}
+// function getUserById(id) {
+//   return db
+//     .select('*')
+//     .from('user')
+//     .where({id});
+// }
 
 function getUsers() {
   return db.select('*').from('user');

@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const session = require('express-session')
-
-const authRouter = require('../auth/restricted_midware');
+const authRouter = require('../auth/router')
+// const hasToken = require('../auth/restricted_midware');
 const userRouter = require('../users/user_router');
 const instructorRouter = require('../instructors/instructor_router');
 
@@ -30,8 +30,7 @@ server.use(session(sessionConfiguration))
 server.get('/', (req, res) => {
   res.send({server: 'up'});
 });
-
-server.use('/api/auth', authRouter);
+server.use('/api/auth', authRouter)
 server.use('/api/auth/users/classes', userRouter);
 server.use('/api/auth/instructor/classes', instructorRouter);
 

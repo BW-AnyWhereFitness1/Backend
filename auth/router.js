@@ -50,7 +50,7 @@ router.use("/login", (req, res) => {
   } else {
     res.status(400).json({
       message:
-        "Please provide username & password. The password should be alphanumeric.",
+        "Please provide username & password.",
     });
   }
 });
