@@ -8,7 +8,7 @@ const router = express.Router();
 router.use(restricted);
 router.use(checkInstructor);
 
-router.post('/', (req, res) => {
+router.post('/add', (req, res) => {
   const data = req.body;
 
   Class.addClass(data)
