@@ -8,10 +8,18 @@ exports.up = function(knex) {
         .unique()
         .index();
   
+      tbl.string('instructor_name').notNullable();
+  
       tbl.string('type').notNullable();
+      tbl.string('start-time').notNullable();
   
       tbl
         .string('intensity')
+        .notNullable()
+        .index();
+  
+      tbl
+        .string('date')
         .notNullable()
         .index();
   
@@ -22,6 +30,8 @@ exports.up = function(knex) {
   
       tbl.integer('max_size').notNullable();
       tbl.float('duration').notNullable();
+      tbl.bool('signedUp').defaultTo('false');
+      tbl.integer('current_members').defaultTo(0);
     });
   };
   
