@@ -9,7 +9,6 @@ exports.up = function(knex) {
         .index();
     
       tbl.string('type').notNullable();
-      tbl.string('start-time').notNullable();
   
       tbl
         .string('intensity')
