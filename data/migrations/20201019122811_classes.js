@@ -7,9 +7,7 @@ exports.up = function(knex) {
         .notNullable()
         .unique()
         .index();
-  
-      tbl.string('instructor_name').notNullable();
-  
+    
       tbl.string('type').notNullable();
       tbl.string('start-time').notNullable();
   
