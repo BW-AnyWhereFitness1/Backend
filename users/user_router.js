@@ -81,22 +81,6 @@ router.get('/duration', (req, res) => {
     });
 });
 
-router.get('/instructor', (req, res) => {
-  const {instructor_name} = req.body;
-
-  Users.getByInstructor(instructor_name)
-    .then(clas => {
-      if (clas) {
-        res.status(200).json({data: clas});
-      } else {
-        res.status(404).json({message: 'could not find class by instructor'});
-      }
-    })
-    .catch(err => {
-      res.status(500).json({message: 'Error fetching instructor'});
-    });
-});
-
 router.post('/:id/favorite', (req, res) => {
   const {class_id} = req.body;
   const user_id = req.params.id;

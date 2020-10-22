@@ -10,7 +10,6 @@ module.exports = {
   getIntensity,
   getByLocation,
   getByDuration,
-  getByInstructor,
   addFavorite,
   getFavoriteClass
 };
@@ -78,13 +77,6 @@ function getByDuration(duration) {
     .select('*')
     .from('class')
     .where({duration});
-}
-
-function getByInstructor(instructor_name) {
-  return db
-    .select('*')
-    .from('class')
-    .where({instructor_name});
 }
 
 function addFavorite(user_id, class_id) {
