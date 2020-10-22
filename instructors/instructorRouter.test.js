@@ -41,52 +41,52 @@ describe('adding a class', () => {
     });
 })
   
-// describe('getting a class', () => {
+describe('getting a class', () => {
 
-//     test('/GET /api/auth/instructor/classes/:id', async () => {
-//       const register = await supertest(server)
-//         .post('/api/auth/register')
-//         .send({
-//           name: 'namik',
-//           email: 'namik@gmail.com',
-//           username: 'namik',
-//           password: 'namik',
-//           role: 'instructor'
-//         });
-//       const login = await supertest(server)
-//         .post('/api/auth/login')
-//         .send({username: 'namik', password: 'namik'});
+    test('/GET /api/auth/instructor/classes/:id', async () => {
+      const register = await supertest(server)
+        .post('/api/auth/register')
+        .send({
+          name: 'namik',
+          email: 'namik@gmail.com',
+          username: 'namik',
+          password: 'namik',
+          role: 'instructor'
+        });
+      const login = await supertest(server)
+        .post('/api/auth/login')
+        .send({username: 'namik', password: 'namik'});
     
-//       const response = await supertest(server)
-//         .get('/api/auth/instructor/classes/1')
-//         .set('authorization', login.body.token);
+      const response = await supertest(server)
+        .get('/api/auth/instructor/classes/1')
+        .set('authorization', login.body.token);
     
-//       expect(response.status).toBe(200);
-//       expect.arrayContaining(response.body);
-//     });
-// })
+      expect(response.status).toBe(200);
+      expect.arrayContaining(response.body);
+    });
+})
  
-// describe('deleting a class', () => {
+describe('deleting a class', () => {
 
-//     test('/DELETE /api/auth/instructor/classes/:id', async () => {
-//       const register = await supertest(server)
-//         .post('/api/auth/register')
-//         .send({
-//           name: 'namik',
-//           email: 'namik@gmail.com',
-//           username: 'namik',
-//           password: 'namik',
-//           role: 'instructor'
-//         });
-//       const login = await supertest(server)
-//         .post('/api/auth/login')
-//         .send({username: 'namik', password: 'namik'});
+    test('/DELETE /api/auth/instructor/classes/:id', async () => {
+      const register = await supertest(server)
+        .post('/api/auth/register')
+        .send({
+          name: 'namik',
+          email: 'namik@gmail.com',
+          username: 'namik',
+          password: 'namik',
+          role: 'instructor'
+        });
+      const login = await supertest(server)
+        .post('/api/auth/login')
+        .send({username: 'namik', password: 'namik'});
     
-//       const response = await supertest(server)
-//         .delete('/api/auth/instructor/classes/1')
-//         .set('authorization', login.body.token);
+      const response = await supertest(server)
+        .delete('/api/auth/instructor/classes/1')
+        .set('authorization', login.body.token);
     
-//       expect(response.status).toBe(200);
-//       expect(response.body).toMatchObject({message: 'class deleted'});
-//     });
-// }) 
+      expect(response.status).toBe(200);
+      expect(response.body).toMatchObject({message: 'class deleted'});
+    });
+}) 
