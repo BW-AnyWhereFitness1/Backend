@@ -7,7 +7,6 @@ exports.seed = function(knex) {
       return knex('class').insert([
         {
           name: 'pure yoga',
-          instructor_name: 'yogi',
           type: 'yoga',
           intensity: 'high',
           location: 'vegas',
@@ -17,7 +16,6 @@ exports.seed = function(knex) {
         },
         {
           name: 'meditation',
-          instructor_name: 'sadhguru',
           type: 'medetation',
           intensity: 'low',
           location: 'birmingham',
@@ -27,7 +25,6 @@ exports.seed = function(knex) {
         },
         {
           name: 'cardio running',
-          instructor_name: 'bolt',
           type: 'cardio',
           intensity: 'medium',
           location: 'japan',
