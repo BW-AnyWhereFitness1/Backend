@@ -15,19 +15,19 @@ describe('adding a class', () => {
       const register = await supertest(server)
         .post('/api/auth/register')
         .send({
-          name: 'nami',
-          email: 'nami@gmail.com',
-          username: 'nami',
-          password: 'nami',
+          name: 'namik',
+          email: 'namik@gmail.com',
+          username: 'namik',
+          password: 'namik',
           role: 'instructor'
         });
       const login = await supertest(server)
         .post('/api/auth/login')
-        .send({username: 'nami', password: 'nami'});
+        .send({username: 'namik', password: 'namik'});
     
       const response = await supertest(server)
         .post('/api/auth/instructor/classes/add')
-        .set('authorization', login.body)
+        .set('authorization', login.body.token)
         .send({
           name: 'walk',
           type: 'walking',
@@ -47,15 +47,15 @@ describe('adding a class', () => {
 //       const register = await supertest(server)
 //         .post('/api/auth/register')
 //         .send({
-//           name: 'nami',
-//           email: 'nami@gmail.com',
-//           username: 'nami',
-//           password: 'nami',
+//           name: 'namik',
+//           email: 'namik@gmail.com',
+//           username: 'namik',
+//           password: 'namik',
 //           role: 'instructor'
 //         });
 //       const login = await supertest(server)
 //         .post('/api/auth/login')
-//         .send({username: 'nami', password: 'nami'});
+//         .send({username: 'namik', password: 'namik'});
     
 //       const response = await supertest(server)
 //         .get('/api/auth/instructor/classes/1')
@@ -72,15 +72,15 @@ describe('adding a class', () => {
 //       const register = await supertest(server)
 //         .post('/api/auth/register')
 //         .send({
-//           name: 'nami',
-//           email: 'nami@gmail.com',
-//           username: 'nami',
-//           password: 'nami',
+//           name: 'namik',
+//           email: 'namik@gmail.com',
+//           username: 'namik',
+//           password: 'namik',
 //           role: 'instructor'
 //         });
 //       const login = await supertest(server)
 //         .post('/api/auth/login')
-//         .send({username: 'nami', password: 'nami'});
+//         .send({username: 'namik', password: 'namik'});
     
 //       const response = await supertest(server)
 //         .delete('/api/auth/instructor/classes/1')

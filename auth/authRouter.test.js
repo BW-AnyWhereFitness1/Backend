@@ -25,7 +25,7 @@ describe('trying to register and login', () => {
       message: 'success!'
     });
   });
-   
+    
   test('POST /api/auth/login', async () => {
     const register = await supertest(server)
       .post('/api/auth/register')
